@@ -1,0 +1,21 @@
+{
+    "name": "user/dmitry-dev",
+    "scripts": {
+        "start": "php -S localhost:8080 -t public"
+    },
+    "description": "my personal site",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "config": {
+        "process-timeout": 0
+    },
+    "authors": [
+        {
+            "name": "d.andreev"
+        }
+    ],
+    "require": {}
+}

@@ -1,0 +1,10 @@
+@import "/features/theme/jet/shared-components/jet-field/jet-field.css";
+
+.input {
+    user-select: none;
+    -webkit-user-select: none;
+    /* For WebKit browsers like Chrome, Safari */
+    -moz-user-select: none;
+    /* For Firefox */
+    -ms-user-select: none;
+}

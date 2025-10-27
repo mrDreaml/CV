@@ -1,0 +1,1 @@
+import{useStyle}from"/shared/utils/component.js";class JetFont extends HTMLElement{constructor(){super(),this.shadow=this.attachShadow({mode:"open"}),this.shadow.innerHTML="<slot></slot>",useStyle(this,"/features/theme/jet/components/jet-font/index.css")}}customElements.define("jet-font",JetFont);

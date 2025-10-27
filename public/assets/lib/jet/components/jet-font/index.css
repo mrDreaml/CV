@@ -1,0 +1,10 @@
+::slotted(h1),
+::slotted(h2),
+::slotted(h3),
+::slotted(h4),
+::slotted(h5),
+::slotted(h6) {
+  font-weight: 300;
+  line-height: 1em;
+  color: var(--color,#000)
+}

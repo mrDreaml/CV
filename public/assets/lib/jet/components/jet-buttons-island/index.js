@@ -1,0 +1,1 @@
+class JetButtonsIsland extends HTMLElement{constructor(){super()}}customElements.define("jet-buttons-island",JetButtonsIsland);
