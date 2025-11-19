@@ -54,7 +54,7 @@ export const useGlassMaterial = async (rootEl, { isShadow, style } = DEFAULT_PAR
     <svg color-interpolation-filters="sRGB" style="display:none" >
               <defs>
                   <filter id="${imageId}">
-                  <feImage href="/src/features/theme/glass/assets/magnifying-map.png" x="0" y="0" preserveAspectRatio="none" result="magnifying_displacement_map"></feImage>
+                  <feImage href="./src/features/glassMaterial/magnifying-map.png" x="0" y="0" preserveAspectRatio="none" result="magnifying_displacement_map"></feImage>
                       <feDisplacementMap in="SourceGraphic" in2="magnifying_displacement_map" scale="9"
                           xChannelSelector="R" yChannelSelector="G" result="magnified_source"></feDisplacementMap>
                       <feGaussianBlur in="magnified_source" stdDeviation="0" result="blurred_source"></feGaussianBlur>
