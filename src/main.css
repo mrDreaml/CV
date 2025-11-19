@@ -54,7 +54,7 @@ li {
 
 .main-info {
     display: flex;
-    gap: 2em;
+    gap: .5em;
     margin-top: 2em;
 }
 
@@ -93,6 +93,7 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: 1em;
 }
 
 .main-info__profile-photo {
@@ -284,6 +285,7 @@ li {
     .main-info {
         flex-direction: column;
         align-items: center;
+        gap: 1em;
     }
 
     .main-tabs {
@@ -292,6 +294,11 @@ li {
 
     .main-header {
         margin-bottom: 0;
+    }
+
+    .main-contacts {
+        align-self: center;
+        font-size: 1.5em;
     }
 
     .tabs__header-item {
@@ -303,5 +310,14 @@ li {
 
     .experience-tab {
         padding: .2em;
+    }
+
+    .main-info__profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .main-info__description {
+        margin-left: 0;
     }
 }
