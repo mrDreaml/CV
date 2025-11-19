@@ -44,7 +44,8 @@ li {
 }
 
 .main-header {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     align-self: center;
     padding: 0 2em;
     box-sizing: border-box;
@@ -171,6 +172,7 @@ li {
     padding: 1em;
     border-radius: .8em;
     box-shadow: 0 0 .3em #00000020;
+    box-sizing: border-box;
 }
 
 .experience-item__head {
@@ -264,6 +266,7 @@ li {
 
     a {
         font-weight: 400;
+        text-align: center;
     }
 }
 
@@ -274,5 +277,31 @@ li {
 
     to {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-tabs {
+        --indicator-width-from: 60px;
+    }
+
+    .main-header {
+        margin-bottom: 0;
+    }
+
+    .tabs__header-item {
+        width: 60px;
+        flex-direction: column;
+        gap: .2em;
+        padding: .2em;
+    }
+
+    .experience-tab {
+        padding: .2em;
     }
 }
