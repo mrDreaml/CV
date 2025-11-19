@@ -1,0 +1,10 @@
+:host {}
+
+.top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-image: linear-gradient(#ffffffff 0%, #00000000 100%);
+    z-index: 1;
+}

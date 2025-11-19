@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="резюме, блог, услуги создания сайта">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Dmitry Andreev">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dmitry Dev</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" href="assets/icons/logo-32.png" sizes="32x32">
+    <link rel="icon" href="assets/icons/logo-48.png" sizes="48x48">
+    <link rel="icon" href="assets/icons/logo-96.png" sizes="96x96">
+    <link rel="icon" href="assets/icons/logo-144.png" sizes="144x144">
+
+    <link rel="stylesheet" href="/src/main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.13/dist/html-to-image.min.js"></script>
+
+    <style>
+        *:not(:defined) {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <page-scroll>
+        <template shadowRootMode="open">
+            <link rel="stylesheet" href="/src/features/page-scroll/index.css">
+            <div class="top"></div>
+        </template>
+    </page-scroll>
+    <main class="main">
+        <header class="main-header">
+            <section class="main-info">
+
+                <img src="./assets/profile.webp" alt="Мое крутое фото" class="main-info__profile-photo" />
+
+                <div class="main-info__description">
+                    <h1 class="main-info__title">Дмитрий Андреев</h1>
+                    <span class="main-info__text">Инженер-программист</span>
+                    <span class="main-info__text">Английский B1</span>
+                </div>
+                <section class="main-contacts">
+                    <a class="main-contacts__button main-contacts__button-telegram" href="https://web.telegram.org/k/#@dimaAndreev0101" target="_blank"></a>
+                    <a class="main-contacts__button main-contacts__button-linkedin" href="https://www.linkedin.com/in/dmitriy-andreev-56198417b" target="_blank"></a>
+                    <a class="main-contacts__button main-contacts__button-gmail" href="mailto:dimaandreev0101@gmail.com" target="_blank"></a>
+                </section>
+            </section>
+        </header>
+
+        <section class="main-tabs">
+            <glass-tabs active-tab="job" id="main-tabs">
+                <template shadowRootMode="open">
+                    <link rel="stylesheet" href="/src/features/glass-tabs/index.css">
+
+                    <div class="tabs-navigation tabs-navigation__sticky" data-id="tabs-navigation">
+                        <div class="active-indicator" data-id="active-indicator"></div>
+                        <slot name="tab-header"></slot>
+                    </div>
+                    <slot name="tab-content"></slot>
+                </template>
+
+                <div slot="tab-header" data-tab-name="job" class="tabs__header-item tabs__header-item__active">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="tabs__header-item-icon">
+                        <path
+                            d="M160-120q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160Zm0-80h640v-440H160v440Zm240-520h160v-80H400v80ZM160-200v-440 440Z" />
+                    </svg>
+                    <span class="tabs__header-item-text">Опыт</span>
+                </div>
+                <div slot="tab-header" data-tab-name="education" class="tabs__header-item tabs__header-item__active">
+                    <svg class="tabs__header-item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                        <path
+                            d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 241 200-108v-151L480-360 280-470v151l200 108Zm0-241Zm0 90Zm0 0Z" />
+                    </svg>
+                    <span class="tabs__header-item-text">Образование</span>
+                </div>
+                <div slot="tab-header" data-tab-name="projects" class="tabs__header-item">
+                    <svg class="tabs__header-item-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                        <path
+                            d="M460-420h200v-80H460v80Zm-60 60v-200h320v200H400ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Z">
+                        </path>
+                    </svg>
+                    <span class="tabs__header-item-text">Портфолио</span>
+                </div>
+
+                <div slot="tab-content" name="job" class="tabs__content-item">
+                    <section class="experience-tab">
+                        <div class="experience-item shape">
+                            <header class="experience-item__head">
+                                <img class="experience-item__logo" src="/assets/companies/maxbit.webp"
+                                    alt="MaxBitShit Logo" loading="lazy" />
+                                <div class="experience-item__info">
+                                    <h2 class="experience-item__title">Maxbitsolution</h2>
+                                    <p class="experience-item__text">сент. 2024 г. – настоящее время</p>
+                                </div>
+                            </header>
+
+                            <main class="experience-item__main">
+                                <h3 class="experience-item__main-title">Технологии</h3>
+                                <div class="experience-item__badge-wrapper">
+                                    <div class="experience-item__badge">Vue</div>
+                                    <div class="experience-item__badge">Nuxt</div>
+                                    <div class="experience-item__badge">Pinia</div>
+                                    <div class="experience-item__badge">PWA</div>
+                                    <div class="experience-item__badge">TMA</div>
+                                    <div class="experience-item__badge">Type Script</div>
+                                    <div class="experience-item__badge">Webpack</div>
+                                    <div class="experience-item__badge">Jest</div>
+                                    <div class="experience-item__badge">HTML 5</div>
+                                    <div class="experience-item__badge">Css 3</div>
+                                </div>
+                                <h3 class="experience-item__main-title">Описание компании</h3>
+                                <p>IT-компания, создающая проекты в сфере iGaming.
+                                    Разрабатывает высоконагруженные системы с использованием Ruby on Rails, Vue.js, PHP
+                                    и Go,
+                                    с помощью СРА-сети управляем трафикообразованием и лидогенерацией.</p>
+                                <h3 class="experience-item__main-title">Обязанности и ключевые задачи</h3>
+                                <ul>
+                                    <li>Выполнял роль ключевого разработчика на проекте, работая в условиях NDA
+                                        (подробности не
+                                        разглашаются);</li>
+                                    <li>Осуществлял полный цикл разработки сложного фронтенд-приложения: от
+                                        проектирования архитектуры и
+                                        реализации функциональности до оптимизации производительности и рефакторинга;
+                                    </li>
+                                    <li>Участвовал в принятии ключевых технических решений, влияющих на развитие
+                                        продукта и технологического
+                                        стека;</li>
+                                    <li>Курировал код-ревью, занимался менторством junior- и middle-разработчиков в
+                                        команде</li>
+                                    <li>Обеспечивал высокое качество и поддерживаемость кода через внедрение лучших
+                                        практик и написанием
+                                        unit-тестов.</li>
+                                </ul>
+                            </main>
+                        </div>
+
+                        <div class="experience-item shape">
+                            <header class="experience-item__head">
+                                <img class="experience-item__logo" src="/assets/companies/vebtech.webp"
+                                    alt="Bel Web Logo" loading="lazy" />
+                                <div class="experience-item__info">
+                                    <h2 class="experience-item__title">VebTech</h2>
+                                    <p class="experience-item__text">апр. 2024 г. - сент. 2024 г. · 6 мес.</p>
+                                </div>
+                            </header>
+
+                            <main class="experience-item__main">
+                                <h3 class="experience-item__main-title">Технологии</h3>
+                                <div class="experience-item__badge-wrapper">
+                                    <div class="experience-item__badge">React</div>
+                                    <div class="experience-item__badge">Formik</div>
+                                    <div class="experience-item__badge">Material UI</div>
+                                    <div class="experience-item__badge">Tanstack Table</div>
+                                    <div class="experience-item__badge">Type Script</div>
+                                    <div class="experience-item__badge">Webpack</div>
+                                    <div class="experience-item__badge">HTML 5</div>
+                                    <div class="experience-item__badge">Css 3</div>
+                                </div>
+                                <h3 class="experience-item__main-title">Описание проекта</h3>
+                                <p>Разработка фронтенд-приложений для БелВЭБ Банка</p>
+                                <h3 class="experience-item__main-title">Обязанности и ключевые задачи</h3>
+                                <p>Разрабатывал и поддерживал библиотеку переиспользуемых UI-компонентов для обеспечения
+                                    единообразия
+                                    интерфейса во всех проектах.</p>
+                                <ul>
+                                    <li>Участие в полном цикле разработки трёх банковских веб-приложений с нуля. Проекты
+                                        представляли собой
+                                        админские панели с функционалом для работы с формами и таблицами;</li>
+                                    <li>Ключевые реализованные функции: безопасная аутентификация, система ролевого
+                                        доступа (RBAC),
+                                        многопользовательская поддержка и адаптивный интерфейс;</li>
+                                    <li>Повысил эффективность процесса разработки, выполнив миграцию с Webpack на Vite,
+                                        что значительно
+                                        сократило время сборки;</li>
+                                </ul>
+                            </main>
+                        </div>
+
+                        <div class="experience-item shape">
+                            <header class="experience-item__head">
+                                <img class="experience-item__logo" src="/assets/companies/forteGroup.webp"
+                                    alt="Forte Group Logo" loading="lazy" />
+                                <div class="experience-item__info">
+                                    <h2 class="experience-item__title">Forte Group</h2>
+                                    <p class="experience-item__text">сент. 2019 г. - апр. 2024 г. · 4 г. 8 мес.</p>
+                                </div>
+                            </header>
+
+                            <main class="experience-item__main">
+                                <h3 class="experience-item__main-title">Технологии</h3>
+                                <div class="experience-item__badge-wrapper">
+                                    <div class="experience-item__badge">React</div>
+                                    <div class="experience-item__badge">Redux-Forms</div>
+                                    <div class="experience-item__badge">React Hook Forms</div>
+                                    <div class="experience-item__badge">Web Worker</div>
+                                    <div class="experience-item__badge">Reselect</div>
+                                    <div class="experience-item__badge">Ramda</div>
+                                    <div class="experience-item__badge">Lodash</div>
+                                    <div class="experience-item__badge">Immer</div>
+                                    <div class="experience-item__badge">Eslint</div>
+                                    <div class="experience-item__badge">Jest</div>
+                                    <div class="experience-item__badge">Puppeteer</div>
+                                    <div class="experience-item__badge">Css 3</div>
+                                </div>
+                                <h3 class="experience-item__main-title">Описание проекта</h3>
+                                <p>Проект под названием <a href="https://mediacosts.sqad.com/" target="_blank">Media
+                                        Costs</a> — это сложное веб-приложение
+                                    для планирования рекламных кампаний. Приложение загружает необходимые данные с
+                                    сервера и предоставляет
+                                    пользователю инструменты для работы с ними. Ключевой функциональностью является
+                                    таблица, аналогичная
+                                    Excel, которая позволяет создавать рекламные блоки (флайты) с настраиваемыми
+                                    свойствами, производить
+                                    расчеты, а также задавать внешний вид флайтов для их визуализации.</p>
+                                <h3 class="experience-item__main-title">Обязанности и ключевые задачи</h3>
+                                <ul>
+                                    <li>Разработка новой функциональности, оптимизация, исправление ошибок и рефакторинг
+                                        кода;</li>
+                                    <li>Участие в командных встречах и обсуждение деталей разработки;</li>
+                                    <li>Решение проблемы с зависанием интерфейса, что привело к значительному повышению
+                                        производительности
+                                        приложения;</li>
+                                    <li>Написание юнит и интеграционных тестов;</li>
+                                    <li>Разработка универсальной логики для работы с формами на основе Redux Form с
+                                        поддержкой каскадных
+                                        обновлений;</li>
+                                    <li>Разработка интерактивного элемента Formula Constructor - компонент учитывая
+                                        контекс формулы
+                                        предсказывает следующий шаг и упрощает механизм написание формул для
+                                        пользователя;</li>
+                                    <li>Создание системных типов данных для работы с формулами на уровне приложения;
+                                    </li>
+                                    <li>Реализация механизма зависимостей для оптимизации перерасчета формул;</li>
+                                    <li>Добавление глобальных горячих клавиш и менеджера навигации.</li>
+                                </ul>
+                            </main>
+                        </div>
+                    </section>
+                </div>
+                <div slot="tab-content" name="education" class="tabs__content-item" style="display: none;">
+                    <section class="experience-tab">
+                        <div class="experience-item">
+                            <header class="experience-item__head">
+                                <img class="experience-item__logo" src="/assets/education/rollingScopes.webp"
+                                    alt="Rolling Scopes лого" loading="lazy" />
+                                <div class="experience-item__info">
+                                    <h2 class="experience-item__title">Rolling Scopes - курсы фронтенд</h2>
+                                    <p class="experience-item__text">авг. 2018 г. - март 2019 г.</p>
+                                </div>
+                            </header>
+                            <main class="experience-item__main">
+                                <h3 class="experience-item__main-title">Описание</h3>
+                                <p>Имея базовую подготовку в области программирования, я целенаправленно выбрал эти
+                                    курсы для углубленного изучения фронтенд-разработки. В рамках программы:</p>
+                                <ul>
+                                    <li>Освоил продвинутые техники разработки на чистом JavaScript, HTML и CSS без
+                                        использования фреймворков, что позволило понять основы браузерных API и принципы
+                                        построения веб-интерфейсов.</li>
+                                    <li>Развивал навыки решения алгоритмических задач на платформе Codewars, повышая
+                                        уровень владения языком и логику мышления.</li>
+                                    <li>Получил практический опыт командной работы в условиях, приближенных к
+                                        коммерческой разработке: участвовал в спринте по созданию рабочего приложения с
+                                        нуля за одну неделю, что включало планирование, распределение задач и совместную
+                                        интеграцию кода.</li>
+                                </ul>
+                                <p>В результате я систематизировал имеющиеся знания и получил комплексное представление
+                                    о современной фронтенд-разработке, заложив прочный фундамент для дальнейшего роста в
+                                    этой области.</p>
+                            </main>
+                        </div>
+
+                        <div class="experience-item">
+                            <header class="experience-item__head">
+                                <img class="experience-item__logo" src="/assets/education/bntu.webp" alt="БНТУ лого"
+                                    loading="lazy" />
+                                <div class="experience-item__info">
+                                    <h2 class="experience-item__title">БНТУ, Минск</h2>
+                                    <p class="experience-item__text">Инженер-программист</p>
+                                    <p class="experience-item__text">сент. 2017 г. - май 2021 г.</p>
+                                </div>
+                            </header>
+                            <main class="experience-item__main">
+                                <h3 class="experience-item__main-title">Описание</h3>
+                                <p>Фундаментальное образование заложило мощную теоретическую и практическую базу в
+                                    области разработки программного обеспечения. В процессе обучения освоил несколько
+                                    языков программирования, включая C++, C#, Python, Java и JavaScript, и получил
+                                    практический опыт их применения. Изучил ключевые принципы инженерии, методологии
+                                    тестирования ПО и управления проектами.</p>
+                                <p>Главным итогом стало формирование инженерного мышления, что позволяет уверенно
+                                    осваивать новые технологии и языки программирования для решения любых
+                                    профессиональных задач.</p>
+                            </main>
+                        </div>
+                    </section>
+                </div>
+                <div slot="tab-content" name="projects" class="tabs__content-item" style="display: none;">
+                    <section class="experience-tab">
+                        <div class="experience-item">
+                            <header class="experience-item__head">
+                                <img class="experience-item__logo" src="/assets/projects/moneyTracker.webp"
+                                    alt="Money Tracker logo" loading="lazy" />
+                                <div class="experience-item__info">
+                                    <h2 class="experience-item__title">Money Tracker - приложение для контроля расходов
+                                    </h2>
+                                    <p class="experience-item__text">2025 г.</p>
+                                </div>
+                            </header>
+                            <main class="experience-item__main">
+                                <h3 class="experience-item__main-title">Технологии</h3>
+                                <div class="experience-item__badge-wrapper">
+                                    <div class="experience-item__badge">Java Script</div>
+                                    <div class="experience-item__badge">Web Components</div>
+                                    <div class="experience-item__badge">PWA</div>
+                                    <div class="experience-item__badge">HTML 5</div>
+                                    <div class="experience-item__badge">Css 3</div>
+                                </div>
+                                <h3 class="experience-item__main-title">Описание</h3>
+                                <p>Money Tracker (PWA) — это удобное и современное приложение для управления личными
+                                    финансами, которое
+                                    всегда под рукой. Оно создано, чтобы помочь вам взять под контроль свои расходы и
+                                    доходы, понять свои
+                                    финансовые привычки и грамотно планировать бюджет.</p>
+                                <h3 class="experience-item__main-title">Медиа</h3>
+                                <custom-slider class="experience-item__slider" delta-x="200">
+                                    <template shadowRootMode="open">
+                                        <link rel="stylesheet" href="/src/features/custom-slider/index.css">
+
+                                        <div class="navigation-control navigation-control__left" tabindex="0"
+                                            data-control="prev">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+                                                height="1em" width="1em">
+                                                <path d="M642-48 209-480l433-432 103 103-329 329 329 329L642-48Z" />
+                                            </svg>
+                                        </div>
+                                        <div class="navigation-control navigation-control__right" tabindex="0"
+                                            data-control="next">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                                viewBox="0 -960 960 960" width="1em">
+                                                <path d="M321-48 218-151l329-329-329-329 103-103 432 432L321-48Z" />
+                                            </svg>
+                                        </div>
+                                        <slot class="slides" data-id="slides"></slot>
+                                    </template>
+
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/moneyTracker/0.webp"
+                                        loading="lazy" />
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/moneyTracker/1.webp"
+                                        loading="lazy" />
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/moneyTracker/2.webp"
+                                        loading="lazy" />
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/moneyTracker/3.webp"
+                                        loading="lazy" />
+                                </custom-slider>
+                            </main>
+                            <footer class="experience-item__controls">
+                                <a href="https://github.com/mrDreaml/money-tracker" target="_blank"
+                                    class="button">Исходный код</a>
+                                <a href="https://mrdreaml.github.io/money-tracker/" target="_blank"
+                                    class="button">Ссылка на проект</a>
+                            </footer>
+                        </div>
+
+                        <div class="experience-item">
+                            <header class="experience-item__head">
+                                <img class="experience-item__logo" src="/assets/projects/cardsCityLogo.webp"
+                                    alt="Cards City logo" loading="lazy" />
+                                <div class="experience-item__info">
+                                    <h2 class="experience-item__title">Cards City - онлайн настольная игра</h2>
+                                    <p class="experience-item__text">2024 г.</p>
+                                </div>
+                            </header>
+                            <main class="experience-item__main">
+                                <h3 class="experience-item__main-title">Технологии</h3>
+                                <div class="experience-item__badge-wrapper">
+                                    <div class="experience-item__badge">React</div>
+                                    <div class="experience-item__badge">Right Store</div>
+                                    <div class="experience-item__badge">Vite</div>
+                                    <div class="experience-item__badge">PWA</div>
+                                    <div class="experience-item__badge">TMA</div>
+                                    <div class="experience-item__badge">HTML 5</div>
+                                    <div class="experience-item__badge">Css 3</div>
+                                    <div class="experience-item__badge">Node JS</div>
+                                    <div class="experience-item__badge">Socket IO</div>
+                                </div>
+                                <h3 class="experience-item__main-title">Описание</h3>
+                                <p>Cards City — это стратегическая настольная игра. Каждая карта представляет собой
+                                    здание: от скромной
+                                    сыроварни до мощного стадиона, которые приносят доход и особые эффекты. В игру можно
+                                    играть как в
+                                    одиночку так и с друзьями. Также доступна и в телеграм, а если хочется использовать
+                                    как нативное
+                                    приложение можно и установить через браузер.</p>
+                                <h3 class="experience-item__main-title">Медиа</h3>
+                                <custom-slider class="experience-item__slider" delta-x="200">
+                                    <template shadowRootMode="open">
+                                        <link rel="stylesheet" href="/src/features/custom-slider/index.css">
+
+                                        <div class="navigation-control navigation-control__left" tabindex="0"
+                                            data-control="prev">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+                                                height="1em" width="1em">
+                                                <path d="M642-48 209-480l433-432 103 103-329 329 329 329L642-48Z" />
+                                            </svg>
+                                        </div>
+                                        <div class="navigation-control navigation-control__right" tabindex="0"
+                                            data-control="next">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                                viewBox="0 -960 960 960" width="1em">
+                                                <path d="M321-48 218-151l329-329-329-329 103-103 432 432L321-48Z" />
+                                            </svg>
+                                        </div>
+                                        <slot class="slides" data-id="slides"></slot>
+                                    </template>
+
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/cardsCity/0.webp"
+                                        loading="lazy" />
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/cardsCity/1.webp"
+                                        loading="lazy" />
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/cardsCity/2.webp"
+                                        loading="lazy" />
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/cardsCity/3.webp"
+                                        loading="lazy" />
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/cardsCity/4.webp"
+                                        loading="lazy" />
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/cardsCity/5.webp"
+                                        loading="lazy" />
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/cardsCity/6.webp"
+                                        loading="lazy" />
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/cardsCity/7.webp"
+                                        loading="lazy" />
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/cardsCity/8.webp"
+                                        loading="lazy" />
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/cardsCity/9.webp"
+                                        loading="lazy" />
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/cardsCity/10.webp"
+                                        loading="lazy" />
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/cardsCity/11.webp"
+                                        loading="lazy" />
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/cardsCity/12.webp"
+                                        loading="lazy" />
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/cardsCity/13.webp"
+                                        loading="lazy" />
+                                </custom-slider>
+                            </main>
+                            <footer class="experience-item__controls">
+                                <a href="https://cardscity.online/" target="_blank" class="button">Ссылка на проект</a>
+                            </footer>
+                        </div>
+                    </section>
+                </div>
+            </glass-tabs>
+        </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
