@@ -7,4 +7,5 @@
     height: 60px;
     background-image: linear-gradient(#ffffffff 0%, #00000000 100%);
     z-index: 1;
+    opacity: 0;
 }

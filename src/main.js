@@ -20,6 +20,9 @@ const main = async () => {
         const url = new URL(window.location.href)
         url.searchParams.set('tab', value)
         window.history.replaceState({}, '', url)
+        tabsEl.scrollIntoView({
+            behavior: "smooth",
+        });
     })
 }
 
