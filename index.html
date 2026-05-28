@@ -327,6 +327,79 @@
                     <section class="experience-tab">
                         <div class="experience-item">
                             <header class="experience-item__head">
+                                <img class="experience-item__logo" src="/assets/projects/taskManagement.webp"
+                                    alt="Money Tracker logo" loading="lazy" />
+                                <div class="experience-item__info">
+                                    <h2 class="experience-item__title">Task Management - приложение для управления
+                                        задачами
+                                    </h2>
+                                    <p class="experience-item__text">2026 г.</p>
+                                </div>
+                            </header>
+                            <main class="experience-item__main">
+                                <h3 class="experience-item__main-title">Технологии</h3>
+                                <div class="experience-item__badge-wrapper">
+                                    <div class="experience-item__badge">React Native</div>
+                                    <div class="experience-item__badge">React</div>
+                                    <div class="experience-item__badge">React Hook Forms</div>
+                                    <div class="experience-item__badge">Expo</div>
+
+                                    <div class="experience-item__badge">Type Script</div>
+                                    <div class="experience-item__badge">Java Script</div>
+                                    <div class="experience-item__badge">HTML</div>
+                                    <div class="experience-item__badge">CSS</div>
+                                </div>
+                                <h3 class="experience-item__main-title">Описание</h3>
+                                <p>Task Management — Приложение помогает выездным сотрудникам управлять задачами.
+                                    Пользователь может добавлять карточки с названием, описанием, временем и адресом, а
+                                    также смотреть их общим списком с сортировкой по дате или статусу. Доступен
+                                    детальный просмотр, удаление и смена статуса (В процессе, Выполнено, Отменено). Все
+                                    данные сохраняются локально на устройстве, обеспечивая автономность после закрытия
+                                    программы. Минималистичный и интуитивный интерфейс помогает полностью
+                                    сфокусироваться на текущей работе..</p>
+                                <h3 class="experience-item__main-title">Медиа</h3>
+                                <custom-slider class="experience-item__slider" delta-x="200">
+                                    <template shadowRootMode="open">
+                                        <style>
+                                            @import url("/src/features/custom-slider/index.css");
+                                        </style>
+
+                                        <div class="navigation-control navigation-control__left" tabindex="0"
+                                            data-control="prev">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+                                                height="1em" width="1em">
+                                                <path d="M642-48 209-480l433-432 103 103-329 329 329 329L642-48Z" />
+                                            </svg>
+                                        </div>
+                                        <div class="navigation-control navigation-control__right" tabindex="0"
+                                            data-control="next">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                                viewBox="0 -960 960 960" width="1em">
+                                                <path d="M321-48 218-151l329-329-329-329 103-103 432 432L321-48Z" />
+                                            </svg>
+                                        </div>
+                                        <slot class="slides" data-id="slides"></slot>
+                                    </template>
+
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/taskManagement/0.webp"
+                                        loading="lazy" />
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/taskManagement/1.webp"
+                                        loading="lazy" />
+                                    <img class="custom-slider__item experience-item__slider-item" data-id="slider-item"
+                                        alt="скриншот приложения" src="/assets/projects/taskManagement/2.webp"
+                                        loading="lazy" />
+                                </custom-slider>
+                            </main>
+                            <footer class="experience-item__controls">
+                                <a href="https://github.com/mrDreaml/RN-Task-Management" target="_blank"
+                                    class="button">Исходный код</a>
+                            </footer>
+                        </div>
+
+                        <div class="experience-item">
+                            <header class="experience-item__head">
                                 <img class="experience-item__logo" src="/assets/projects/moneyTracker.webp"
                                     alt="Money Tracker logo" loading="lazy" />
                                 <div class="experience-item__info">
